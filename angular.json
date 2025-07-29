@@ -3,5 +3,34 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "custom-merged-date-select-lib": {
+      "projectType": "library",
+      "root": "projects/custom-merged-date-select-lib",
+      "sourceRoot": "projects/custom-merged-date-select-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/custom-merged-date-select-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/custom-merged-date-select-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/custom-merged-date-select-lib/tsconfig.spec.json"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "6489a902-2b68-4d05-ae82-e9c1fd25e15d"
   }
 }

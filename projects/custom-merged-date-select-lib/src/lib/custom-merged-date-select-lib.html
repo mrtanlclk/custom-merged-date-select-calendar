@@ -1,0 +1,81 @@
+<div class="date-controls-container">
+  <button mat-icon-button class="nav-button" (click)="changeMonth('prev')">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+  <div class="month-picker-container">
+      <mat-icon class="calendar-icon">calendar_month</mat-icon>
+      <label>Month:&nbsp;</label>
+      <input
+        matInput
+        [value]="displayMonth + ' ' + displayYear"
+        readonly
+        (click)="toggleMonthPicker()"
+        style="font-size: 16px; font-weight: bold"
+         (click)="onClickOutside($event)"
+      />
+      @if(isMonthPickerOpen) {
+        <mat-icon
+        matSuffix
+        class="dropdown-arrow"
+        (click)="toggleMonthPicker()"
+        >arrow_drop_up</mat-icon
+      >
+      }
+      @if(!isMonthPickerOpen) {
+        <mat-icon
+        matSuffix
+        class="dropdown-arrow"
+        (click)="toggleMonthPicker()"
+        >arrow_drop_down</mat-icon
+      >
+      }
+
+    <div class="month-dropdown" *ngIf="isMonthPickerOpen">
+      <div class="year-section">
+        <div class="year-navigation">
+          <button
+            mat-icon-button
+            (click)="changeYear('prev')"
+            title="Previous Year"
+            class="nav-button"
+          >
+            <mat-icon>chevron_left</mat-icon>
+          </button>
+
+          <div class="year-display">
+            {{ displayYear }}
+          </div>
+
+          <button
+            mat-icon-button
+            (click)="changeYear('next')"
+            title="Next Year"
+            class="nav-button"
+          >
+            <mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+      </div>
+
+      <div class="month-section" (focus)="isMonthPickerOpen = true">
+        <div class="month-grid">
+          <button
+            mat-button
+            class="month-option"
+            *ngFor="let month of months"
+            (click)="selectMonth(month);onClickOutside($event)"
+            [class.selected]="
+              getDisplayMonth(currentSelectedDate)?.value === month.value
+            "
+          >
+            {{ month.label }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button mat-icon-button class="nav-button" (click)="changeMonth('next')">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</div>
