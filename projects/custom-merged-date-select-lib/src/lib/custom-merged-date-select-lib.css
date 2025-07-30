@@ -20,7 +20,7 @@
   position: absolute;
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  width: 33%;
+  width: 16%;
 
   .year-navigation {
     display: flex;
