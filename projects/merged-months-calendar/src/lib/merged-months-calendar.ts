@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, HostListener, Input, Output, ElementRef } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'merged-months-calendar',
-  imports: [MatFormFieldModule, MatIconModule, CommonModule],
+  imports: [MatFormFieldModule, MatIconModule, MatInputModule, CommonModule, FormsModule],
   templateUrl: './merged-months-calendar.html',
   styleUrl: './merged-months-calendar.css',
 
@@ -34,14 +36,7 @@ export class MergedMonthsCalendar {
   isMonthPickerOpen: boolean = false;
   currentSelectedMonth: { label: string; value: number | number[] } | null = null;
 
-  constructor(private elementRef: ElementRef) {}
-
-  @HostListener('document:click', ['$event'])
-  onClickOutside(event: Event) {
-    if (!this.elementRef.nativeElement.contains(event.target)) {
-      this.isMonthPickerOpen = false;
-    }
-  }
+  constructor() {}
 
   ngOnInit() {
     this.displayMonth = this.getDisplayMonth(this.currentSelectedDate)?.label || ''; // Show month
@@ -117,6 +112,7 @@ export class MergedMonthsCalendar {
 
     // Date operations - use both month and year
     const date = new Date();
+    date.setDate(1); // Set to the first day of the month
     date.setFullYear(this.displayYear);
 
     if (Array.isArray(month.value)) {

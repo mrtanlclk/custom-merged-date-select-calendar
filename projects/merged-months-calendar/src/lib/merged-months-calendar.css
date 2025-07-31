@@ -4,9 +4,18 @@
   padding: 8px;
   background-color: #f5f5f5;
   border-radius: 4px;
-  .calendar-icon, .dropdown-arrow {
-    position: relative;
-    top: 5px
+
+  .calendar-icon,
+  .dropdown-arrow {
+    overflow: visible;
+  }
+
+  .calendar-icon {
+    margin-right: 4px
+  }
+
+  .dropdown-arrow {
+    cursor: pointer;
   }
 }
 
@@ -20,7 +29,9 @@
   position: absolute;
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  width: 16%;
+  z-index: 1000;
+  margin-top: 5px;
+  border-radius: 5px;
 
   .year-navigation {
     display: flex;
@@ -46,12 +57,40 @@
       text-align: center;
       cursor: pointer;
       border-radius: 4px;
-      background-color: rgb(252, 232, 252);
+      border: none;
+      background-color: white;
 
       &:hover {
-        background-color: #ffffff;
+        background-color: rgba(50, 34, 44, 0.1);
+      }
+
+      &.selected {
+        background-color: #32222c;
+        color: white;
       }
     }
 
   }
+}
+
+.mat-form-field {
+  width: 250px;
+
+  .mat-form-field-inside {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+.chevron-icon {
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+      background-color: rgba(50, 34, 44, 0.1);
+    }
+}
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  display: none;
 }
