@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/custom-merged-date-select-lib",
+  "dest": "../../dist/merged-months-calendar",
   "lib": {
     "entryFile": "src/public-api.ts"
   }

@@ -3,20 +3,20 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "custom-merged-date-select-lib": {
+    "merged-months-calendar": {
       "projectType": "library",
-      "root": "projects/custom-merged-date-select-lib",
-      "sourceRoot": "projects/custom-merged-date-select-lib/src",
+      "root": "projects/merged-months-calendar",
+      "sourceRoot": "projects/merged-months-calendar/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",
           "configurations": {
             "production": {
-              "tsConfig": "projects/custom-merged-date-select-lib/tsconfig.lib.prod.json"
+              "tsConfig": "projects/merged-months-calendar/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/custom-merged-date-select-lib/tsconfig.lib.json"
+              "tsConfig": "projects/merged-months-calendar/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -24,7 +24,7 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "tsConfig": "projects/custom-merged-date-select-lib/tsconfig.spec.json"
+            "tsConfig": "projects/merged-months-calendar/tsconfig.spec.json"
           }
         }
       }

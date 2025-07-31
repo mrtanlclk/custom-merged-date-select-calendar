@@ -1,5 +1,5 @@
 {
-  "name": "custom-merged-date-select-lib",
+  "name": "merged-months-calendar",
   "version": "1.0.0",
   "description": "A custom Angular library for selecting dates with merged month and year selection.",
   "author": "Mert Anıl Çelik",

@@ -4,8 +4,8 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "custom-merged-date-select-lib": [
-        "./dist/custom-merged-date-select-lib"
+      "merged-months-calendar": [
+        "./dist/merged-months-calendar"
       ]
     },
     "strict": true,
@@ -30,10 +30,10 @@
   "files": [],
   "references": [
     {
-      "path": "./projects/custom-merged-date-select-lib/tsconfig.lib.json"
+      "path": "./projects/merged-months-calendar/tsconfig.lib.json"
     },
     {
-      "path": "./projects/custom-merged-date-select-lib/tsconfig.spec.json"
+      "path": "./projects/merged-months-calendar/tsconfig.spec.json"
     }
   ]
 }

@@ -1,5 +1,5 @@
 /*
- * Public API Surface of custom-merged-date-select-lib
+ * Public API Surface of merged-months-calendar
  */
 
-export * from './lib/custom-merged-date-select-lib';
+export * from './lib/merged-months-calendar';

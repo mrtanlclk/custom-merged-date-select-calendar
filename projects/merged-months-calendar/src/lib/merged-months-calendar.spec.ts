@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CustomMergedDateSelectLib } from './custom-merged-date-select-lib';
+import { CustomMergedDateSelectLib } from './merged-months-calendar';
 
 describe('CustomMergedDateSelectLib', () => {
   let component: CustomMergedDateSelectLib;
