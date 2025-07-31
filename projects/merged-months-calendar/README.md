@@ -2,7 +2,7 @@
 Import the library into a module:
 
 ```typescript
-import { CustomMergedDateSelectLib } from 'custom-merged-date-select-lib';
+import { MergedMonthsCalendar } from 'merged-months-calendar';
 
 ...
 
@@ -10,7 +10,7 @@ import { CustomMergedDateSelectLib } from 'custom-merged-date-select-lib';
   declarations: [ ...  ],
   imports: [
     ...
-    CustomMergedDateSelectLib
+    MergedMonthsCalendar
   ],
   ...
 })
@@ -18,11 +18,11 @@ import { CustomMergedDateSelectLib } from 'custom-merged-date-select-lib';
 
 Use it in HTML files:
 ```typescript
-<custom-merged-date-select-lib 
+<merged-months-calendar
   (dateChange)="onDateChange($event)" 
   [currentSelectedDate]="currentDate"
   [months]="months"
-  ></custom-merged-date-select-lib>
+></merged-months-calendar>
 ```
 
 Use it in Ts files:

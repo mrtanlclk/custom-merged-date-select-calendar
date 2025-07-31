@@ -1,16 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, HostListener, Inject, Input, Output, ElementRef } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output, ElementRef } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'custom-merged-date-select-lib',
+  selector: 'merged-months-calendar',
   imports: [MatFormFieldModule, MatIconModule, CommonModule],
-  templateUrl: './custom-merged-date-select-lib.html',
-  styleUrl: './custom-merged-date-select-lib.css',
+  templateUrl: './merged-months-calendar.html',
+  styleUrl: './merged-months-calendar.css',
 
 })
-export class CustomMergedDateSelectLib {
+export class MergedMonthsCalendar {
   @Output() dateChange: EventEmitter<Date> = new EventEmitter<Date>();
   @Input() currentSelectedDate: Date = new Date();
 
