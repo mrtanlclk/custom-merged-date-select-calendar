@@ -1,14 +1,14 @@
 {
-  "name": "custom-merged-date-select",
+  "name": "merged-months-calendar",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build-lib": "ng build custom-merged-date-select-lib",
+    "build-lib": "ng build merged-months-calendar",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "pack-lib": "cd dist/custom-merged-date-select-lib && npm pack"
+    "pack-lib": "cd dist/merged-months-calendar && npm pack"
   },
   "prettier": {
     "overrides": [

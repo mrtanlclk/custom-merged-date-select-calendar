@@ -5,12 +5,12 @@
   "author": "Mert Anıl Çelik",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mrtanlclk/custom-merged-date-select-calendar.git"
+    "url": "https://github.com/mrtanlclk/merged-month-calendar.git"
   },
   "bugs": {
-    "url": "https://github.com/mrtanlclk/custom-merged-date-select-calendar.git/issues"
+    "url": "https://github.com/mrtanlclk/merged-month-calendar.git/issues"
   },
-  "homepage": "https://github.com/mrtanlclk/custom-merged-date-select-calendar",
+  "homepage": "https://github.com/mrtanlclk/merged-month-calendar",
   "keywords": ["angular", "date-picker", "custom-component", "library"],
   "peerDependencies": {
     "@angular/common": "^20.1.0",
